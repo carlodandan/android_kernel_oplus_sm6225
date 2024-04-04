@@ -15,7 +15,7 @@ else
      read kernel_defconfig
      
     # Setup missing packages (always, since web IDE instance always going back it its default state)
-    sudo apt-get install flex bc cpio build-essential openssl libssl-dev libfl-dev -y
+    sudo apt-get install flex bc device-tree-compiler bison cpio build-essential openssl libssl-dev libfl-dev -y
     
     # Set Base Path, it call your current root directory as your HOME dir.
     PROJECT_DIR=$(dirname "$(readlink -f "${BASH_SOURCE[0]}")")
