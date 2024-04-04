@@ -114,7 +114,7 @@ else
         make O=${PROJECT_DIR}/out ARCH=arm64 LLVM=1 CROSS_COMPILE=aarch64-linux-gnu- CROSS_COMPILE_COMPAT=arm-linux-gnueabi- -j3 2>&1 | tee ${PROJECT_DIR}/build.log
     elif [ "${1}" = "gcc" ]; then
         make O=${PROJECT_DIR}/out ARCH=arm64 CC=clang HOSTCC=clang CLANG_TRIPLE=aarch64-linux-gnu- CROSS_COMPILE=aarch64-linux-android- CROSS_COMPILE_ARM32=arm-linux-androideabi- $kernel_defconfig
-        make O=${PROJECT_DIR}/out ARCH=arm64 CC=clang HOSTCC=clang CROSS_TRIPLE=aarch64-linux-gnu- CROSS_COMPILE=aarch64-linux-android- CROSS_COMPILE_ARM32=arm-linux-androideabi- -j3 2>&1 | tee ${PROJECT_DIR}/build.log
+        make O=${PROJECT_DIR}/out ARCH=arm64 CC=clang HOSTCC=clang CLANG_TRIPLE=aarch64-linux-gnu- CROSS_COMPILE=aarch64-linux-android- CROSS_COMPILE_ARM32=arm-linux-androideabi- -j3 2>&1 | tee ${PROJECT_DIR}/build.log
     fi
     
     # Setup AnyKernel3
